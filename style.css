@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    background: #f5f3f3;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+    background: #e8e6e6;
+    width: 100%;
+}
+header>h2{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    height: 6rem;
+    width: 100%;
+}
+nav>.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-weight: 600;
+}
+.nav-links>ul>li>a{ 
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #000;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo-background{
+    border: 2px solid khaki;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    cursor: pointer;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: .5rem;
+    border-radius: 10px;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    gap: .5rem;
+    padding-left: .5rem;
+}
+.searchbar>.searchbox>input{
+    height: 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Bodoni Moda', serif;
+}
+.cartbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    gap: .5rem;
+    border-radius: .5rem;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+.cartbox>.cart-text>p{
+    font-size: 1.4rem;
+    padding-right: .5rem;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
+}
+.user-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 1px solid lightgray;
+    border-radius: .5rem;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+.user-details>.user-text>p{
+    font-size: 1.4rem;
+    padding-right: .5rem;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
+}
+
+/* NAVBAR CLOSED */
+.hero-section>img{
+    width: 100%;
+}
+/* BANNER IMAGE */
+product-display-section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+.product-container{
+    background: #FFFFFF;
+    margin: 2.5rem;
+}
+.product-text-displaybox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+#view-button{
+    border: 1px solid lightgray;
+    padding: 1rem;
+}
+.product-text-displaybox>#view-button:hover{
+    cursor: pointer;
+    background: #edecec;
+    border: 1px solid lightgray;
+}
+.products-displaybox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.product-img>img{
+    width: 95%;
+    margin-bottom: .5rem;
+}
+.product-details{
+    font-family: 'Bodoni Moda', serif;
+}
+.product-details>img{
+    cursor: pointer;
+}
+.add-to-cart-btn{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    background: #fb4b4b;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+}
+.add-to-cart-btn:active{
+    background: #edecec;
+    color: #000;
+}
+/* NEW ARRIVAL BANNER SECTION */
+.new-arrival-banner-section{
+    display: flex;
+    gap: 1.5rem;
+}
+.rightside-details{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rightside-details>h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F16793;
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+.rightside-details>button{
+    width: 15rem;
+    height: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 4rem;
+    font-size: 1.3rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.rightside-details>button:active{
+    background-color: #e8e6e6;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion_Plaza</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animation.css">
+
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+        <h3>Welcome to our store!</h3>
+    </header>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="logo">
+        <div class="logo-background">
+          <h1>Fashion</h1>
+            <h1>Plaza</h1> 
+        </div>
+      </div>
+
+      <div class="nav-details">
+        <div class="searchbar">
+          <div class="search-icon">
+            <img src="./icon-svg/icons8-search-30.png" alt="search" />
+          </div>
+          <div class="searchbox">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+
+        <div class="cartbox">
+          <div class="cart-icon">
+            <img src="./icon-svg/icons8-bag-30.png" alt="cart" />
+          </div>
+          <div class="cart-text">
+            <p>Cart</p>
+          </div>
+        </div>
+
+        <div class="user-details">
+          <div class="user-icon">
+            <img src="./icon-svg/icons8-user-30.png" alt="user" />
+          </div>
+          <div class="user-text">
+            <p>Login</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR CLOSED -->
+    <main class="hero-section">
+        <img src="./images/Fashion Beauty main BANNER.jpg" alt="">
+    </main>
+    <!-- BANNER -->
+    <!-- LATEST COLLECTION SECTION WITH PRODUCTS DISPLAY -->
+    <section class="product-display-section scroll-container"> <!-- scroll-container -->
+        <div class="product-container  scroll-element js-scroll fade-in "> <!-- scroll-element js-scroll fade-in -->
+            <div class="product-text-displaybox scroll-caption">
+                <h1>LATEST COLLECTION</h1>
+                <h1 id="view-button">VIEW ALL</h1>
+            </div>
+
+        <div class="products-displaybox"> 
+            <div class="product-display-flex-container scroll-caption"> 
+                <div class="product-img">
+                    <img src="./images/product-01.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Eterna long dress black</h3>
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart.png" alt="icon">
+                    <h3>$189.50</h3>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-display-flex-container">
+                <div class="product-img">
+                    <img src="./images/product-02.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Spark nigh party dress green</h3>
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart.png" alt="icon">
+                    <h3>$145.20</h3>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-display-flex-container">
+                <div class="product-img">
+                    <img src="./images/product-03.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Alnich night dress navy</h3>
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart.png" alt="icon">
+                    <h3>$70.10</h3>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+
+            <div class="product-display-flex-container">
+                <div class="product-img">
+                    <img src="./images/product-04.jpg" alt="">
+                </div>
+                <div class="product-details">
+                    <h3>Meena dress maroon</h3>
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart-fill.png" alt="icon">
+                    <img src="./icon-svg/icons8-heart.png" alt="icon">
+                    <h3>$199.27</h3>
+                    <button class="add-to-cart-btn">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+        <!-- PRODCT SECTION CLOSED -->
+        <section class="new-arrival-banner-section">
+          <div class="leftside-banner">
+            <img src="./images/Fashion Brand New Arrival BANNER.jpg" alt="banner">
+          </div>
+          <div class="rightside-details">
+            <h1>Revamp Your Closet , Redefine Your Style Get Fashion for Every You.</h1>
+            <button>Shop The Collection</button>
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="animation.js"></script>
+  </body>
+</html>
