@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Products</title>
+    <title>Fashion_plaza/newArrivals</title>
     <style>
         /* Some basic styling for the products */
         .product-card {
             border: 1px solid #ccc;
-            padding: 15px;
             margin: 10px;
             width: 100%;
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
             vertical-align: top;
             
         }
         .product-card img {
-            width: 100px;
+            width: 20rem;
         }
+        .product-card button {
+            margin-bottom: 2rem;
+        }
+
     </style>
 </head>
 <body>
 
 <div id="products-container" class="container mt-5">
-    <h2>Random Products</h2>
+    <h2>New Arrivals</h2>
     <div id="product-list">
         
     </div>
@@ -47,11 +53,12 @@
                 productCard.classList.add('product-card');
                 if(product.category=== `women's clothing`){
                   productCard.innerHTML = `
-                  <h3>${product.title}</h3>
                   <img src='${product.image}' />
+                  <h3>${product.title}</h3>
                     <p><strong>Price:</strong> $${product.price}</p>
                     <p><strong>Category:</strong> ${product.category}</p>
                     <p>${product.description}</p>
+                    <button>ADD TO CART</button>
                 `;
                 productContainer.appendChild(productCard);
                 }
