@@ -1,60 +1,50 @@
 
-
-
-.scroll-container {
-  /* height: 100vh; */
-  /* min-height: 450px; */
-  /* padding: 2rem 1rem; */
-  display: flex;
-  align-items: center;
-  /* box-sizing: border-box; */
-}
-/* 
-.scroll-container:nth-of-type(1) {
-  background-color: #75caa1;
-}
-.scroll-container:nth-of-type(2) {
-  background-color: #eb5c40;
-}
-.scroll-container:nth-of-type(3) {
-  background-color: #f5ca45;
-}
-.scroll-container:nth-of-type(4) {
-  background-color: #569ff8;
-} 
-*/
-
 .scroll-container:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
 
-.scroll-element {
-  min-height: 300px;
-  height: 100%;
-  background-color: #eaeaea;
-}
-
 .scroll-caption {
-  margin: 1rem;
+  margin: .5rem;
 }
 
-footer {
-  text-align: center;
-  padding: 0.5rem 0;
-  background-color: #faddad;
+.text-pop-up-right:hover {
+	-webkit-animation: text-pop-up-right 0.5s ease-in-out alternate both;
+	        animation: text-pop-up-right 0.5s ease-in-out alternate both;
+}
+@-webkit-keyframes text-pop-up-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
 }
 
-footer p {
-  font-size: 0.75rem;
-  margin: 0.25rem 0;
-  color: #221133;
-}
-
-footer a {
-  text-decoration: none;
-  color: inherit;
-}
 
 @media screen and (max-width: 650px) {
   .scroll-container,
@@ -67,10 +57,6 @@ footer a {
     height: 100%;
   }
 
-  .scroll-element,
-  .scroll-caption {
-    width: 100%;
-  }
 }
 /**Styling scrollable elements*/
 
