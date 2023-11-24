@@ -3,11 +3,6 @@
   flex-direction: row-reverse;
 }
 
-
-.scroll-caption {
-  margin: .5rem;
-}
-
 .text-pop-up-right:hover {
 	-webkit-animation: text-pop-up-right 0.5s ease-in-out alternate both;
 	        animation: text-pop-up-right 0.5s ease-in-out alternate both;

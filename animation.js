@@ -38,3 +38,18 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => { 
   handleScrollAnimation();
 });
+
+// RESPONSIVE NAVBAR
+let open = false;
+function handleDisplay(){
+    open = !open
+    if(open == true){
+       document.getElementById("hide").style.display = "block"
+       document.getElementById("hideimg").style.display = "block"
+    
+    }else{
+        document.getElementById("hide").style.display = "none"
+       document.getElementById("hideimg").style.display = "none"
+
+    }
+};

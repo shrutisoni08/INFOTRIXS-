@@ -29,7 +29,7 @@ header>h2{
     font-family: 'Bodoni Moda', serif;
     font-weight: 800;
 }
-nav{
+.nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -125,6 +125,56 @@ nav>.nav-links{
     font-weight: 600;
     font-family: 'Bodoni Moda', serif;
 }
+#navbar-menu{
+    display: none;
+}
+
+/* RESPONSIVE NAVBAR */
+.responsive-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    flex-direction: column;
+    line-height: 2rem;
+}
+.res-nav-links>ul>li>a{
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
+
+}
+.hide{
+    display: none;
+}
+.res-nav-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* MEDIA QURIES */
+/* MAX WIDTH 768PX */
+@media screen and (max-width: 768px) {
+    .hide{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-details{
+        display: none;
+    }
+    #navbar-menu{
+        display: block;
+    }
+    .logo{
+        margin-left: 25%;
+    }
+}
 
 /* NAVBAR CLOSED */
 .hero-section>img{
@@ -169,7 +219,7 @@ nav>.nav-links{
     margin: 1rem;
 }
 .product-img>a>img{
-    width: 95%;
+    width: 30%;
     margin-bottom: .5rem;
 }
 .product-details{
@@ -196,10 +246,12 @@ nav>.nav-links{
     color: #000;
 }
 /* NEW ARRIVAL BANNER SECTION */
-.new-arrival-banner-section{
+
+.new-arrival-banner-section{ 
     display: flex;
-    gap: 1.5rem;
-}
+    gap: 1.4rem;
+ }
+
 .rightside-details{
     flex-direction: column;
     display: flex;
@@ -229,7 +281,24 @@ nav>.nav-links{
 }
 .rightside-details>button:active{
     background-color: #e8e6e6;
+} 
+/* RESPONSIVENESS 768PX */
+@media screen and (max-width: 768px) {
+.rightside-details>h1{
+    font-size: 1.4rem;
 }
+.rightside-details>button{
+    width: 10rem;
+    height: 5rem;
+    font-size: 1rem;
+}
+.leftside-banner>img{
+    width: 180%;
+    height: 100%;
+}
+
+}
+
 /* NEW ARRIVAL BANNER SECTION */
 
 /* PRODUCT DISPLAY CATEGORIES */
@@ -256,6 +325,8 @@ nav>.nav-links{
     text-decoration: none;
     color: #000;
 }
+
+
 /* product category */
 /* TESTIMONIALS */
 .testimonials-main-container{
