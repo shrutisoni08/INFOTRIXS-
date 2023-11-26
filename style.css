@@ -333,10 +333,9 @@ nav>.nav-links{
 .Category-img-text>img{
     width: 50%;
 }
-.text-pop-up-right{
+.Category-img-text>p>.text-pop-up-right{
     font-size: 1.3rem;
 }
-
 
 }
 
@@ -414,6 +413,36 @@ footer{
     color: #edecec;
     font-family: 'Playfair Display', serif;
 }
+@media screen and (max-width: 768px) {
+    .fter-description p{
+        font-size: 1.3rem;
+    }
+    .footer-logo>h1{
+        font-size: 1rem;
+    }
+    .footer-logo>p{
+        font-size: .5rem;
+    }
+    .footer-logo li{
+        font-size: .7rem;
+    }
+    .footer-information-links>h1{
+        font-size: 1rem;
+    }
+    .footer-information-links li{
+        font-size: .7rem;
+    }
+    .discover-section>h1{
+        font-size: 1rem;
+    }
+    .address-section>h1{
+        font-size: 1rem;
+    }
+    .discover-section{
+        font-size: .7rem;
+    }
+}
+
 .main-footer-description{
     display: flex;
     align-items: center;
