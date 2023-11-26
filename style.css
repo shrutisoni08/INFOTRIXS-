@@ -325,6 +325,20 @@ nav>.nav-links{
     text-decoration: none;
     color: #000;
 }
+/* MEDIA QUERIES 768PX */
+@media screen and (max-width: 768px) {
+.Category-heading{
+    font-size: 3rem;
+}
+.Category-img-text>img{
+    width: 50%;
+}
+.text-pop-up-right{
+    font-size: 1.3rem;
+}
+
+
+}
 
 
 /* product category */
