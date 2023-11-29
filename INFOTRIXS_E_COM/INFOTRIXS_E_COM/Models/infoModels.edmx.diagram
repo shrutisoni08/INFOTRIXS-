@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f82c9db613d54e268268f2ae799b2dc9" Name="Diagram1">
+        <EntityTypeShape EntityType="INFOTRIXS_E_COMModel.Cart" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="INFOTRIXS_E_COMModel.Product" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INFOTRIXS_E_COMModel.RoleMaster" Width="1.5" PointX="3.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="INFOTRIXS_E_COMModel.UserRolesMapping" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="INFOTRIXS_E_COMModel.User" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="INFOTRIXS_E_COMModel.FK__Cart__userID__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="INFOTRIXS_E_COMModel.FK__UserRoles__RoleI__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="INFOTRIXS_E_COMModel.FK__UserRoles__UserI__3D5E1FD2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500;1,6..96,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    background: #F7F7F7;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2rem;
+    background: #F7F7F7;
+    width: 100%;
+}
+header>h2{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 800;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+    height: 6rem;
+    width: 100%;
+}
+nav>.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-weight: 600;
+}
+.nav-links>ul>li>a{ 
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #000;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.logo-background{
+    border: 2px solid khaki;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    cursor: pointer;
+    font-family: 'Great Vibes', cursive;
+    letter-spacing: .5rem;
+    border-radius: 10px;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    gap: .5rem;
+    padding-left: .5rem;
+}
+.searchbar>.searchbox>input{
+    height: 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: 'Bodoni Moda', serif;
+}
+.cartbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    gap: .5rem;
+    border-radius: .5rem;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+.cartbox>.cart-text>p{
+    font-size: 1.4rem;
+    padding-right: .5rem;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
+}
+.user-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 1px solid lightgray;
+    border-radius: .5rem;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+.user-details>.user-text>p{
+    font-size: 1.4rem;
+    padding-right: .5rem;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
+}
+#navbar-menu{
+    display: none;
+}
+
+/* RESPONSIVE NAVBAR */
+.responsive-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    flex-direction: column;
+    line-height: 2rem;
+}
+.res-nav-links>ul>li>a{
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 600;
+    font-family: 'Bodoni Moda', serif;
+
+}
+.hide{
+    display: none;
+}
+.res-nav-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* MEDIA QURIES */
+/* MAX WIDTH 768PX */
+@media screen and (max-width: 768px) {
+    .hide{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-details{
+        display: none;
+    }
+    #navbar-menu{
+        display: block;
+    }
+    .logo{
+        margin-left: 25%;
+    }
+}
+
+/* NAVBAR CLOSED */
+.hero-section>img{
+    width: 100%;
+}
+/* BANNER IMAGE */
+.product-display-section{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+.product-container{
+    background: #FFFFFF;
+    margin: 2.5rem;
+}
+.product-text-displaybox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+#view-button>a{
+    color: #000;
+}
+#view-button{
+    border: 1px solid lightgray;
+    padding: 1rem;
+    color: #000;
+}
+.product-text-displaybox>#view-button:hover{
+    cursor: pointer;
+    background: #edecec;
+    border: 1px solid lightgray;
+}
+.products-displaybox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+}
+.product-img>a>img{
+    width: 30%;
+    margin-bottom: .5rem;
+}
+.product-details{
+    font-family: 'Bodoni Moda', serif;
+}
+.product-details>img{
+    cursor: pointer;
+}
+.add-to-cart-btn{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    background: #fb4b4b;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+}
+.add-to-cart-btn:active{
+    background: #edecec;
+    color: #000;
+}
+/* NEW ARRIVAL BANNER SECTION */
+
+.new-arrival-banner-section{ 
+    display: flex;
+    gap: 1.4rem;
+ }
+
+.rightside-details{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rightside-details>h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #F16793;
+    font-weight: 600;
+    font-size: 2.3rem;
+}
+.rightside-details>button>a{
+    list-style: none;
+    text-decoration: none;
+    color: #F16793;
+}
+.rightside-details>button{
+    width: 15rem;
+    height: 5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 4rem;
+    font-size: 1.3rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.rightside-details>button:active{
+    background-color: #e8e6e6;
+} 
+/* RESPONSIVENESS 768PX */
+@media screen and (max-width: 768px) {
+.rightside-details>h1{
+    font-size: 1.4rem;
+}
+.rightside-details>button{
+    width: 10rem;
+    height: 5rem;
+    font-size: 1rem;
+}
+.leftside-banner>img{
+    width: 180%;
+    height: 100%;
+}
+
+}
+
+/* NEW ARRIVAL BANNER SECTION */
+
+/* PRODUCT DISPLAY CATEGORIES */
+.display-products-category{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+.Category-heading{
+    font-size: 5rem;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 700;
+    letter-spacing: .5rem;
+    margin-bottom: 3rem;
+}
+.Category-img-text>p>.text-pop-up-right{
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+}
+/* MEDIA QUERIES 768PX */
+@media screen and (max-width: 768px) {
+.Category-heading{
+    font-size: 3rem;
+}
+.Category-img-text>img{
+    width: 50%;
+}
+.text-pop-up-right{
+    font-size: 1.3rem;
+}
+
+
+}
+
+
+/* product category */
+/* TESTIMONIALS */
+.testimonials-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    gap: 2rem;
+}
+.testimonials-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.customer-testimonials-section{
+    background-color: #fff;
+}
+.customer-testimonials-section>h1{
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+
+}
+.user-profile-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.testimonials-message-profile{
+    padding-top: 4rem;
+}
+.testimonials-message-profile>p{
+    font-size: 1.4rem;
+    font-family: 'PT Serif', serif;
+    text-align: justify;
+}
+.user-profile>img{
+    border-radius: 50px;
+}
+.user-profile-name{
+    margin-top: 2rem;
+}
+
+
+
+
+
+/* FOOTER SECTION */
+/* FIRST FOOTER */
+.fter-head-section{
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffff;
+}
+.fter-description p{
+    font-size: 1.5rem;
+}
+.fter-description{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* MAIN FOOTER */
+footer{
+    background-color: #000;
+    color: #edecec;
+    font-family: 'Playfair Display', serif;
+}
+.main-footer-description{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+ul>li{
+    list-style: none;
+    margin-top: 1rem;
+}
+.copyright-section{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+hr{
+    border: 1px solid rgb(96, 96, 96);
+}
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(125, 125, 125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  

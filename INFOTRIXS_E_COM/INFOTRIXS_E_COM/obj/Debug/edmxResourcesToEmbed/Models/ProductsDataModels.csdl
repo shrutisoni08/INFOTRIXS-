@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="INFOTRIXS_E_COMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ratingRate" Type="Decimal" Precision="3" Scale="1" />
+    <Property Name="ratingCount" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="INFOTRIXS_E_COM_DBContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="RoleMasters" EntityType="INFOTRIXS_E_COMModel.RoleMaster" />
+    <EntitySet Name="UserRolesMappings" EntityType="INFOTRIXS_E_COMModel.UserRolesMapping" />
+    <EntitySet Name="Users" EntityType="INFOTRIXS_E_COMModel.User" />
+    <AssociationSet Name="FK__UserRoles__RoleI__3E52440B" Association="INFOTRIXS_E_COMModel.FK__UserRoles__RoleI__3E52440B">
+      <End Role="RoleMaster" EntitySet="RoleMasters" />
+      <End Role="UserRolesMapping" EntitySet="UserRolesMappings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserRoles__UserI__3D5E1FD2" Association="INFOTRIXS_E_COMModel.FK__UserRoles__UserI__3D5E1FD2">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserRolesMapping" EntitySet="UserRolesMappings" />
+    </AssociationSet>
+    <EntitySet Name="Carts" EntityType="INFOTRIXS_E_COMModel.Cart" />
+    <AssociationSet Name="FK__Cart__userID__49C3F6B7" Association="INFOTRIXS_E_COMModel.FK__Cart__userID__49C3F6B7">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="RoleMaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RollName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UserRolesMappings" Relationship="INFOTRIXS_E_COMModel.FK__UserRoles__RoleI__3E52440B" FromRole="RoleMaster" ToRole="UserRolesMapping" />
+  </EntityType>
+  <EntityType Name="UserRolesMapping">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="RoleMaster" Relationship="INFOTRIXS_E_COMModel.FK__UserRoles__RoleI__3E52440B" FromRole="UserRolesMapping" ToRole="RoleMaster" />
+    <NavigationProperty Name="User" Relationship="INFOTRIXS_E_COMModel.FK__UserRoles__UserI__3D5E1FD2" FromRole="UserRolesMapping" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNumber" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserRolesMappings" Relationship="INFOTRIXS_E_COMModel.FK__UserRoles__UserI__3D5E1FD2" FromRole="User" ToRole="UserRolesMapping" />
+    <NavigationProperty Name="Carts" Relationship="INFOTRIXS_E_COMModel.FK__Cart__userID__49C3F6B7" FromRole="User" ToRole="Cart" />
+  </EntityType>
+  <Association Name="FK__UserRoles__RoleI__3E52440B">
+    <End Type="INFOTRIXS_E_COMModel.RoleMaster" Role="RoleMaster" Multiplicity="1" />
+    <End Type="INFOTRIXS_E_COMModel.UserRolesMapping" Role="UserRolesMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleMaster">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRolesMapping">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserRoles__UserI__3D5E1FD2">
+    <End Type="INFOTRIXS_E_COMModel.User" Role="User" Multiplicity="1" />
+    <End Type="INFOTRIXS_E_COMModel.UserRolesMapping" Role="UserRolesMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserRolesMapping">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="ratingRate" Type="Decimal" Precision="3" Scale="1" />
+    <Property Name="ratingCount" Type="Int32" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="INFOTRIXS_E_COMModel.FK__Cart__userID__49C3F6B7" FromRole="Cart" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Cart__userID__49C3F6B7">
+    <End Type="INFOTRIXS_E_COMModel.User" Role="User" Multiplicity="1" />
+    <End Type="INFOTRIXS_E_COMModel.Cart" Role="Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
